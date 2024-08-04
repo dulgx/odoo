@@ -1,0 +1,1092 @@
+2024-08-04 03:34:44,131 84325 INFO ? odoo: Odoo version 16.0 
+2024-08-04 03:34:44,131 84325 INFO ? odoo: Using configuration file at /Users/dulguun/Desktop/odoo/odoo.conf 
+2024-08-04 03:34:44,131 84325 INFO ? odoo: addons paths: ['/Users/dulguun/Desktop/odoo/odoo/addons', '/Users/dulguun/Library/Application Support/Odoo/addons/16.0', '/Users/dulguun/Desktop/odoo/addons'] 
+2024-08-04 03:34:44,131 84325 INFO ? odoo: database: odoo@localhost:5432 
+2024-08-04 03:34:44,184 84325 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2024-08-04 03:34:44,283 84325 INFO ? odoo.service.server: HTTP service (werkzeug) running on 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa:8069 
+2024-08-04 03:36:19,710 84325 ERROR ? odoo.modules.loading: Database odoo_db not initialized, you can force it with `-i base` 
+2024-08-04 03:36:19,712 84325 INFO ? odoo.modules.registry: Registry loaded in 0.036s 
+2024-08-04 03:36:19,714 84325 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:36:19,720 84325 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:36:19] "GET / HTTP/1.1" 500 - 12 0.035 0.047
+2024-08-04 03:36:19,796 84325 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:36:19,798 84325 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:36:19] "GET /favicon.ico HTTP/1.1" 500 - 2 0.004 0.011
+2024-08-04 03:36:44,328 84325 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:36:44,329 84325 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:36:46,388 84325 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:36:46,388 84325 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:37:05,137 84325 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:37:05,139 84325 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:37:05] "GET / HTTP/1.1" 500 - 2 0.005 0.015
+2024-08-04 03:37:05,186 84325 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:37:05,188 84325 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:37:05] "GET /favicon.ico HTTP/1.1" 500 - 2 0.002 0.012
+2024-08-04 03:37:44,333 84325 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:37:44,334 84325 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:37:47,405 84325 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:37:47,406 84325 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:37:50,059 84325 INFO ? odoo.service.server: Initiating server reload 
+2024-08-04 03:37:56,934 84714 INFO ? odoo: Odoo version 16.0 
+2024-08-04 03:37:56,934 84714 INFO ? odoo: Using configuration file at /Users/dulguun/Desktop/odoo/odoo.conf 
+2024-08-04 03:37:56,934 84714 INFO ? odoo: addons paths: ['/Users/dulguun/Desktop/odoo/odoo/addons', '/Users/dulguun/Library/Application Support/Odoo/addons/16.0', '/Users/dulguun/Desktop/odoo/addons'] 
+2024-08-04 03:37:56,934 84714 INFO ? odoo: database: odoo@localhost:5432 
+2024-08-04 03:37:56,986 84714 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2024-08-04 03:37:57,078 84714 INFO ? odoo.service.server: HTTP service (werkzeug) running on 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa:8069 
+2024-08-04 03:38:21,755 84714 ERROR ? odoo.modules.loading: Database odoo_db not initialized, you can force it with `-i base` 
+2024-08-04 03:38:21,755 84714 INFO ? odoo.modules.registry: Registry loaded in 0.022s 
+2024-08-04 03:38:21,757 84714 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:38:21,764 84714 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:38:21] "GET / HTTP/1.1" 500 - 8 0.015 0.033
+2024-08-04 03:38:21,819 84714 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:38:21,821 84714 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:38:21] "GET /favicon.ico HTTP/1.1" 500 - 2 0.003 0.012
+2024-08-04 03:38:24,360 84714 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:38:24,362 84714 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:38:24] "GET / HTTP/1.1" 500 - 2 0.002 0.010
+2024-08-04 03:38:24,473 84714 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:38:24,475 84714 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:38:24] "GET /favicon.ico HTTP/1.1" 500 - 2 0.004 0.008
+2024-08-04 03:38:57,098 84714 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:38:57,099 84714 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:38:58,114 84714 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:38:58,115 84714 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:39:57,106 84714 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:39:57,107 84714 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:39:59,135 84714 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:39:59,136 84714 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:40:55,911 84714 INFO ? odoo.service.server: Initiating server reload 
+2024-08-04 03:43:26,238 85720 INFO ? odoo: Odoo version 16.0 
+2024-08-04 03:43:26,238 85720 INFO ? odoo: Using configuration file at /Users/dulguun/Desktop/odoo/odoo.conf 
+2024-08-04 03:43:26,238 85720 INFO ? odoo: addons paths: ['/Users/dulguun/Desktop/odoo/odoo/addons', '/Users/dulguun/Library/Application Support/Odoo/addons/16.0', '/Users/dulguun/Desktop/odoo/addons'] 
+2024-08-04 03:43:26,238 85720 INFO ? odoo: database: odoo@localhost:5432 
+2024-08-04 03:43:26,806 85720 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2024-08-04 03:43:27,379 85720 INFO ? odoo.service.server: HTTP service (werkzeug) running on 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa:8069 
+2024-08-04 03:43:30,479 85720 ERROR ? odoo.modules.loading: Database odoo_db not initialized, you can force it with `-i base` 
+2024-08-04 03:43:30,480 85720 INFO ? odoo.modules.registry: Registry loaded in 0.017s 
+2024-08-04 03:43:30,481 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:43:30,486 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:43:30] "GET / HTTP/1.1" 500 - 8 0.014 0.025
+2024-08-04 03:43:30,538 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:43:30,540 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:43:30] "GET /favicon.ico HTTP/1.1" 500 - 2 0.004 0.009
+2024-08-04 03:43:31,247 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:43:31,250 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:43:31] "GET / HTTP/1.1" 500 - 2 0.004 0.010
+2024-08-04 03:43:31,298 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:43:31,300 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:43:31] "GET /favicon.ico HTTP/1.1" 500 - 2 0.003 0.011
+2024-08-04 03:43:31,430 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:43:31,431 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:43:31] "GET / HTTP/1.1" 500 - 2 0.005 0.012
+2024-08-04 03:43:31,478 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:43:31,480 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:43:31] "GET /favicon.ico HTTP/1.1" 500 - 2 0.005 0.011
+2024-08-04 03:43:31,586 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:43:31,588 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:43:31] "GET / HTTP/1.1" 500 - 2 0.003 0.012
+2024-08-04 03:43:31,632 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:43:31,634 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:43:31] "GET /favicon.ico HTTP/1.1" 500 - 2 0.005 0.011
+2024-08-04 03:44:27,391 85720 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:44:27,392 85720 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:44:28,406 85720 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:44:28,407 85720 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:45:27,394 85720 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:45:27,395 85720 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:45:29,424 85720 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:45:29,425 85720 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:46:27,403 85720 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:46:27,406 85720 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:46:30,445 85720 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:46:30,446 85720 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:47:27,413 85720 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:47:27,414 85720 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:47:31,465 85720 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:47:31,466 85720 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:48:27,418 85720 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:48:27,419 85720 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:48:32,485 85720 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:48:32,485 85720 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:48:43,754 86389 INFO ? odoo: Odoo version 16.0 
+2024-08-04 03:48:43,755 86389 INFO ? odoo: Using configuration file at /Users/dulguun/Desktop/odoo/odoo.conf 
+2024-08-04 03:48:43,755 86389 INFO ? odoo: addons paths: ['/Users/dulguun/Desktop/odoo/odoo/addons', '/Users/dulguun/Library/Application Support/Odoo/addons/16.0', '/Users/dulguun/Desktop/odoo/addons'] 
+2024-08-04 03:48:43,755 86389 INFO ? odoo: database: odoo@localhost:5432 
+2024-08-04 03:48:43,807 86389 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2024-08-04 03:49:01,487 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:49:01,492 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:49:01] "GET / HTTP/1.1" 500 - 2 0.007 0.024
+2024-08-04 03:49:01,541 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:49:01,543 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:49:01] "GET /favicon.ico HTTP/1.1" 500 - 2 0.004 0.009
+2024-08-04 03:49:01,981 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:49:01,982 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:49:01] "GET / HTTP/1.1" 500 - 2 0.005 0.015
+2024-08-04 03:49:02,032 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:49:02,033 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:49:02] "GET /favicon.ico HTTP/1.1" 500 - 2 0.003 0.007
+2024-08-04 03:49:02,157 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:49:02,158 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:49:02] "GET / HTTP/1.1" 500 - 2 0.004 0.009
+2024-08-04 03:49:02,212 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:49:02,214 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:49:02] "GET /favicon.ico HTTP/1.1" 500 - 2 0.004 0.023
+2024-08-04 03:49:02,336 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:49:02,336 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:49:02] "GET / HTTP/1.1" 500 - 2 0.003 0.009
+2024-08-04 03:49:02,375 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:49:02,376 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:49:02] "GET /favicon.ico HTTP/1.1" 500 - 2 0.004 0.006
+2024-08-04 03:49:02,515 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:49:02,516 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:49:02] "GET / HTTP/1.1" 500 - 2 0.003 0.010
+2024-08-04 03:49:02,553 85720 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:49:02,555 85720 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:49:02] "GET /favicon.ico HTTP/1.1" 500 - 2 0.003 0.009
+2024-08-04 03:49:05,875 86389 INFO ? odoo.service.server: Initiating server reload 
+2024-08-04 03:49:24,195 85720 INFO ? odoo.service.server: Initiating server reload 
+2024-08-04 03:49:29,448 86535 INFO ? odoo: Odoo version 16.0 
+2024-08-04 03:49:29,448 86535 INFO ? odoo: Using configuration file at /Users/dulguun/Desktop/odoo/odoo.conf 
+2024-08-04 03:49:29,448 86535 INFO ? odoo: addons paths: ['/Users/dulguun/Desktop/odoo/odoo/addons', '/Users/dulguun/Library/Application Support/Odoo/addons/16.0', '/Users/dulguun/Desktop/odoo/addons'] 
+2024-08-04 03:49:29,448 86535 INFO ? odoo: database: odoo@localhost:5432 
+2024-08-04 03:49:29,502 86535 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2024-08-04 03:49:29,578 86535 INFO ? odoo.service.server: HTTP service (werkzeug) running on 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa:8069 
+2024-08-04 03:49:40,142 86535 ERROR ? odoo.modules.loading: Database odoo_db not initialized, you can force it with `-i base` 
+2024-08-04 03:49:40,143 86535 INFO ? odoo.modules.registry: Registry loaded in 0.025s 
+2024-08-04 03:49:40,145 86535 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:49:40,152 86535 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:49:40] "GET / HTTP/1.1" 500 - 8 0.017 0.035
+2024-08-04 03:49:40,202 86535 ERROR odoo_db odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1632, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/service/model.py", line 133, in retrying
+    result = func()
+             ^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1644, in _serve_ir_http
+    ir_http = self.registry['ir.http']
+              ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/http.py", line 1636, in _serve_db
+    exc.error_response = self.registry['ir.http']._handle_error(exc)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/dulguun/Desktop/odoo/odoo/modules/registry.py", line 190, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2024-08-04 03:49:40,204 86535 INFO odoo_db werkzeug: 127.0.0.1 - - [04/Aug/2024 03:49:40] "GET /favicon.ico HTTP/1.1" 500 - 2 0.003 0.011
+2024-08-04 03:50:29,597 86535 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:50:29,597 86535 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:50:30,613 86535 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:50:30,614 86535 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:51:29,603 86535 ERROR odoo_db odoo.sql_db: bad query: 
+            SELECT latest_version
+            FROM ir_module_module
+             WHERE name='base'
+        
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2024-08-04 03:51:29,604 86535 WARNING odoo_db odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo_db. 
+2024-08-04 03:51:30,468 86535 INFO ? odoo.service.server: Initiating server reload 
